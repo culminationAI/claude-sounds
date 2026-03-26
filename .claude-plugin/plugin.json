@@ -1,0 +1,11 @@
+{
+  "name": "claude-sounds",
+  "version": "0.2.0",
+  "description": "Your Claude Code shouldn't be silent. Carefully selected sounds for 10 key events. Drop mp3s to customize.",
+  "author": {
+    "name": "culminationA2"
+  },
+  "license": "MIT",
+  "keywords": ["sounds", "audio", "hooks", "sfx", "rpg", "magic"],
+  "hooks": "./hooks/hooks.json"
+}

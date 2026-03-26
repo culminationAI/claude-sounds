@@ -1,0 +1,56 @@
+{
+  "hooks": {
+    "PreToolUse": [
+    {
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'write-*.mp3'", "type": "command" }],
+      "matcher": "^(Write|Edit)$"
+    },
+    {
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'read-*.mp3'", "type": "command" }],
+      "matcher": "^(Read|Grep|Glob)$"
+    },
+    {
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'bash-pre-*.mp3'", "type": "command" }],
+      "matcher": "^Bash$"
+    },
+    {
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'web-search-*.mp3'", "type": "command" }],
+      "matcher": "^WebSearch$"
+    },
+    {
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'web-fetch-*.mp3'", "type": "command" }],
+      "matcher": "^WebFetch$"
+    }
+  ],
+  "PostToolUse": [
+    {
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'agent-start-*.mp3'", "type": "command" }],
+      "matcher": "^Agent$"
+    }
+  ],
+  "UserPromptSubmit": [
+    {
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'user-prompt-*.mp3'", "type": "command" }],
+      "matcher": ".*"
+    }
+  ],
+  "Stop": [
+    {
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'stop-*.mp3'", "type": "command" }],
+      "matcher": ".*"
+    }
+  ],
+  "SubagentStop": [
+    {
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'agent-stop-*.mp3'", "type": "command" }],
+      "matcher": ".*"
+    }
+  ],
+  "Notification": [
+    {
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'notification-*.mp3'", "type": "command" }],
+      "matcher": ".*"
+    }
+  ]
+  }
+}
