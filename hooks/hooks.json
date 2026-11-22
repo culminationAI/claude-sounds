@@ -30,13 +30,13 @@
   ],
   "UserPromptSubmit": [
     {
-      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'user-prompt-*.mp3'", "type": "command" }],
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'user-prompt-*.mp3' always", "type": "command" }],
       "matcher": ".*"
     }
   ],
   "Stop": [
     {
-      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'stop-*.mp3'", "type": "command" }],
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'stop-*.mp3' always", "type": "command" }],
       "matcher": ".*"
     }
   ],
@@ -48,7 +48,7 @@
   ],
   "Notification": [
     {
-      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'notification-*.mp3'", "type": "command" }],
+      "hooks": [{ "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/play.sh 'notification-*.mp3' always", "type": "command" }],
       "matcher": ".*"
     }
   ]
