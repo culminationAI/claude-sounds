@@ -45,6 +45,16 @@ sounds/
 └── ...
 ```
 
+## Throttling
+
+Parallel tool calls and subagents can fire dozens of hooks per second. To keep the system audio daemon healthy (a burst of short-lived players can leave macOS `coreaudiod` stuck at 100%+ CPU), at most 3 sounds play at once and extra ones are dropped. Prompt, stop and notification sounds always play.
+
+Change the limit with an environment variable:
+
+```bash
+export CLAUDE_SOUNDS_MAX_VOICES=2
+```
+
 ## Sound Sources
 
 Included sounds sourced from:
